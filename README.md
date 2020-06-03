@@ -3,6 +3,26 @@
 
 This API handles information about cars and its users
 
+## how to build
+ 1) create virtual env
+ 2) run build.sh
+  
+ ````
+$ mkdir django-cars-service && cd django-cars-service
+$ python3 -m venv venv_django-cars-service
+$ source venv_django-cars-service/bin/activate
+
+(venv_django-cars-service)$ ./requirements.txt
+(venv_django-cars-service)$ python manage.py runserver
+(venv_django-cars-service)$ # Put this in a build.sh script
+(venv_django-cars-service)$ ./build.sh
+
+# Apply DB migration
+(venv_django-cars-service)$ python manage.py makemigrations
+(venv_django-cars-service)$ python manage.py migrate
+
+
+ ````
 ## How to run
 
 #### 1) cd django_cars/carSite 
@@ -109,3 +129,4 @@ curl -X GET http://127.0.0.1:8000/get_ford_cars/?list_length=100
 14) Test some email notification service
 15) Add notification API to SLACK
 16) Test RabbitMq and Celery
+17) Implement run-dev-server.sh

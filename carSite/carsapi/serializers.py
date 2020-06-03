@@ -1,9 +1,10 @@
 from rest_framework import serializers
 
-from .models import CarsUsers
+from .models import Profile
 
 
 class CarsUserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = CarsUsers
+        model = Profile
         fields = ('id', 'created_at',)
+
